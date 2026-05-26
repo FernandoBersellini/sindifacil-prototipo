@@ -7,29 +7,29 @@ interface WorkersTableProps {
 
 export default function WorkersTable({ workers }: WorkersTableProps) {
     return (
-        <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-gray-300 mt-5">
-                <thead className="bg-gray-200">
-                    <tr>
-                        <th className="border border-gray-300 px-4 py-2">ID</th>
-                        <th className="border border-gray-300 px-4 py-2">Nome</th>
-                        <th className="border border-gray-300 px-4 py-2">CPF</th>
-                        <th className="border border-gray-300 px-4 py-2">Nome da Mãe</th>
-                        <th className="border border-gray-300 px-4 py-2">Data de Nascimento</th>
-                        <th className="border border-gray-300 px-4 py-2">Documento</th>
+        <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm bg-white">
+            <table className="w-full border-collapse">
+                <thead>
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">ID</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Nome</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">CPF</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Nome da Mãe</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Data de Nascimento</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Documento</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="divide-y divide-gray-100">
                     {workers.map((worker: Worker) => (
-                        <tr key={worker.id}>
-                            <td className="border border-gray-300 px-4 py-2">{worker.id}</td>
-                            <td className="border border-gray-300 px-4 py-2">{worker.nome}</td>
-                            <td className="border border-gray-300 px-4 py-2">{worker.cpf}</td>
-                            <td className="border border-gray-300 px-4 py-2">{worker.nomeMae}</td>
-                            <td className="border border-gray-300 px-4 py-2">{format(new Date(worker.dataNascimento), 'dd/MM/yyyy')}</td>
-                            <td className="border border-gray-300 px-4 py-2">
+                        <tr key={worker.id} className="hover:bg-gray-50 transition-colors">
+                            <td className="px-4 py-3 text-sm text-gray-500">{worker.id}</td>
+                            <td className="px-4 py-3 text-sm font-medium text-gray-800">{worker.nome}</td>
+                            <td className="px-4 py-3 text-sm text-gray-600">{worker.cpf}</td>
+                            <td className="px-4 py-3 text-sm text-gray-600">{worker.nomeMae}</td>
+                            <td className="px-4 py-3 text-sm text-gray-600">{format(new Date(worker.dataNascimento), 'dd/MM/yyyy')}</td>
+                            <td className="px-4 py-3 text-sm">
                                 {worker.documento
-                                    ? <a className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer" href={worker.documento}>Visualizar</a>
+                                    ? <a className="text-blue-600 hover:text-blue-800 hover:underline font-medium" target="_blank" rel="noopener noreferrer" href={worker.documento}>Visualizar</a>
                                     : <span className="text-gray-400">—</span>}
                             </td>
                         </tr>

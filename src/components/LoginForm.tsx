@@ -19,26 +19,26 @@ export default function LoginForm() {
   return (
     <div className="flex h-screen">
       <form
-        className="m-auto w-1/4 border rounded-lg flex flex-col gap-5 p-5 bg-[#001e45]"
+        className="m-auto w-full max-w-sm border border-gray-200 rounded-2xl flex flex-col gap-5 p-8 bg-white shadow-md"
         onSubmit={onSubmit}
       >
-        <h1 className="text-center text-2xl font-bold text-white">Entrar no Sistema</h1>
+        <h1 className="text-center text-2xl font-bold text-gray-800">Entrar no Sistema</h1>
         <input
-          className="p-2 border rounded-lg"
+          className="p-2.5 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
-          className="p-2 border rounded-lg"
+          className="p-2.5 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
           type="password"
           placeholder="Senha"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <button
-          className="p-2 border rounded-lg cursor-pointer hover:bg-[#00193a] hover:text-white transition-colors"
+          className="p-2.5 bg-blue-600 text-white rounded-lg cursor-pointer hover:bg-blue-700 font-semibold transition-colors"
           type="submit"
         >
           Entrar

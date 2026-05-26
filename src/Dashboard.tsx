@@ -22,18 +22,18 @@ export default function Dashboard() {
     }
 
     return (
-        <div className="flex flex-col h-screen p-5">
-            <div className="flex justify-between mb-5">
-                <h1 className="text-2xl font-bold text-white mb-5">Dashboard de colaboradores</h1>
-                <button onClick={handleLogout} className="flex justify-end bg-blue-500 cursor-pointer hover:bg-blue-600 text-white px-4 py-2 rounded self-center">
+        <div className="flex flex-col min-h-screen bg-gray-50 p-6">
+            <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-200">
+                <h1 className="text-2xl font-bold text-gray-800">Dashboard de colaboradores</h1>
+                <button onClick={handleLogout} className="bg-gray-100 cursor-pointer hover:bg-gray-200 text-gray-700 border border-gray-300 px-4 py-2 rounded-lg font-medium transition-colors">
                     Sair
                 </button>
             </div>
-            <div className="flex justify-between mt-5">
-                <h1 className="text-xl font-bold text-white">Tabela de colaboradores</h1>
+            <div className="flex justify-between items-center mt-2 mb-4">
+                <h2 className="text-xl font-semibold text-gray-700">Tabela de colaboradores</h2>
                 <button
                     onClick={() => setIsModalOpen(true)}
-                    className="bg-blue-500 cursor-pointer hover:bg-blue-600 text-white px-4 py-2 rounded self-center"
+                    className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
                 >
                     Adicionar colaborador
                 </button>
