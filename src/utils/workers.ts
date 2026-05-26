@@ -30,7 +30,8 @@ export const workers = [
         nome: "Carlos Eduardo Mendes",
         cpf: "34567890123",
         nomeMae: "Rosa Mendes Oliveira",
-        dataNascimento: "1978-11-08"
+        dataNascimento: "1978-11-08",
+        documento: placeholderPdf
     },
     {
         id: 4,
@@ -51,7 +52,8 @@ export const workers = [
         nome: "Patrícia Gonçalves",
         cpf: "67890123456",
         nomeMae: "Helena Gonçalves Ramos",
-        dataNascimento: "1993-05-30"
+        dataNascimento: "1993-05-30",
+        documento: placeholderPdf
     },
     {
         id: 7,
@@ -65,7 +67,8 @@ export const workers = [
         nome: "Juliana Nascimento",
         cpf: "89012345678",
         nomeMae: "Sônia Nascimento Campos",
-        dataNascimento: "1998-04-17"
+        dataNascimento: "1998-04-17",
+        documento: placeholderPdf
     },
     {
         id: 9,
@@ -79,7 +82,8 @@ export const workers = [
         nome: "Beatriz Moreira Dias",
         cpf: "01234567890",
         nomeMae: "Marlene Moreira Castro",
-        dataNascimento: "1991-01-19"
+        dataNascimento: "1991-01-19",
+        documento: placeholderPdf
     },
 ];
 
