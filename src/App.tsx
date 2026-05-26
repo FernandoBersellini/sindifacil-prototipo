@@ -5,8 +5,8 @@ import Dashboard from "./Dashboard";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<LoginForm />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/sindifacil-prototipo" element={<LoginForm />} />
+      <Route path="/sindifacil-prototipo/dashboard" element={<Dashboard />} />
     </Routes>
   );
 }
